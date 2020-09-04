@@ -5,7 +5,6 @@ import Box from '@material-ui/core/Box';
 export const Layout = () => {
     return(
         <Container maxWidth="sm">
-            <Box my={4}></Box>
         </Container>
     );
 }

@@ -8,10 +8,9 @@ import { Layout } from './components/Home/Layout';
 export const App = () => {
   return (
       <div className="App">
-        <Layout>
-          <h1>test</h1>
-          <Index></Index>
-        </Layout>
+        <SEO title="Shoppies" />
+        <h1>Movie Nomination</h1>
+        <Index></Index>
     </div>
   );
 }
