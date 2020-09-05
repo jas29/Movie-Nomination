@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import TextField from '@material-ui/core/TextField';
 import { SearchResults } from '../Results/SearchResults';
 import { Cards } from '../Cards/Cards';
+import './index.css'
 
 
 export const Index = () => {
@@ -16,10 +17,10 @@ export const Index = () => {
     return (
     <div>
         <form onSubmit={e => onSubmitHandler(e)}>
-        <div>
-        <TextField id="filled-basic" label="Search for movies" variant="filled" onChange={e => setTitle(e.target.value)}/>
-        </div>
-    </form>
+            <div className="searchContainer">
+            <TextField className="searchBar" id="filled-basic" label="Search for movies" variant="filled" onChange={e => setTitle(e.target.value)}/>
+            </div>
+        </form>
         <Cards cardData={results}></Cards>
     </div>
     );
