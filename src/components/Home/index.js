@@ -1,22 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TextField from '@material-ui/core/TextField';
-import SearchIcon from '@material-ui/icons/Search';
 import { SearchResults } from '../Results/SearchResults';
+import { Cards } from '../Cards/Cards';
 
 
 export const Index = () => {
+    const [results, setResults] = useState({})
+    const [title, setTitle] = useState('');
 
-    const onChangeHandler = async (e) => {
-        const results = await SearchResults(e.target.value);
-        console.log(results)
+    const onSubmitHandler = async (e) => {
+        e.preventDefault();
+        setResults(await SearchResults(title));
     }
 
     return (
-    <form noValidate autoComplete="off">
+    <div>
+        <form onSubmit={e => onSubmitHandler(e)}>
         <div>
-        <TextField id="filled-basic" label="Search for movies" variant="filled" onChange={e => onChangeHandler(e)}/>
+        <TextField id="filled-basic" label="Search for movies" variant="filled" onChange={e => setTitle(e.target.value)}/>
         </div>
     </form>
+        <Cards cardData={results}></Cards>
+    </div>
     );
 }
 
