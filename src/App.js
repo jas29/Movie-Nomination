@@ -11,7 +11,6 @@ export const App = () => {
     <div className="App">
       <SEO title="Shoppies" />
       <Navbar/>
-      <h1>Movie Nomination</h1>
       <Index></Index>
     </div>
   );
