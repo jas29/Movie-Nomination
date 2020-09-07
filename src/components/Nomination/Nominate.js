@@ -27,7 +27,7 @@ export const Nominate = () => {
     }
 
     const LoadNominationList = (nominateMovies) => {
-        if (JSON.parse(localStorage.movie) != null) {
+        if (localStorage.movie && JSON.parse(localStorage.movie) != null) {
             return (
                 <div>
                     {Object.keys(nominateMovies).map((movie, index) => (
@@ -41,7 +41,7 @@ export const Nominate = () => {
                 </div>
             );
         }
-        if (JSON.parse(localStorage.movie) == null) {
+        if (localStorage.movie && JSON.parse(localStorage.movie) == null) {
             return (
                 <MenuItem onClick={handleClose}>
                     No Movies Nominated
