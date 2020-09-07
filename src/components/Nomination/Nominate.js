@@ -5,8 +5,6 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import RemoveIcon from '@material-ui/icons/Remove';
 
-
-
 export const Nominate = () => {
     // This line here is causing an issue, look into this
     const nominateMovies = localStorage.movie ? JSON.parse(localStorage.movie) : {}

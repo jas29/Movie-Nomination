@@ -10,9 +10,7 @@ export const SearchResults = async (movieName) => {
         return response;
     }
     catch(err){
-        // TODO: Return error message if search fails
         console.log(err)
-        return null
     }
 }
 
