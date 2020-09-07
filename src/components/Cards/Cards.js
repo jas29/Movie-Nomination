@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 export const Cards = ({ cardData }) => {
     const [message, setMessage] = useState(false)
 
-    const movies = cardData.data.Search
+    const movies = cardData != null && cardData.data != null ? cardData.data.Search : []
     const classes = useStyles();
     let nominatedMovies = localStorage.movie ? JSON.parse(localStorage.movie) : {}
 
