@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { Index } from './components/Home/index';
 import { SEO } from './components/SEO/SEO';
-import { Layout } from './components/Home/Layout';
 import { Navbar } from './components/Navbar/Navbar';
 
 

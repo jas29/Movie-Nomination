@@ -16,6 +16,7 @@ export const Index = () => {
     const [results, setResults] = useState({})
     const [title, setTitle] = useState("");
     useEffect(() => {
+        /* eslint-disable */
         var url_string = window.location.href
         var url = new URL(url_string);
         var searchValue = url.searchParams.get("search");
@@ -51,8 +52,8 @@ export const Index = () => {
     return (
         <div>
             <form onSubmit={e => onSubmitHandler(e)}>
-                <div className="searchContainer">
-                    <Typography variant="h4" component="h1"> Movie Nomination  </Typography>
+                <div className="searchContainer">   
+                    <Typography variant="h4" component="h1"> Movie Nomination </Typography>
                     <TextField fullWidth value={title} className={`${classes.textField} searchBar`} id="filled-basic" label="Search for movies" variant="outlined" onChange={e => setTitle(e.target.value)} />
                 </div>
             </form>

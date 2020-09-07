@@ -25,10 +25,6 @@ const useStyles = makeStyles((theme) => ({
 
 
 export const Cards = ({ cardData }) => {
-    if (cardData == null || cardData.data == null) {
-        return null;
-    }
-
     const [message, setMessage] = useState(false)
 
     const movies = cardData.data.Search
@@ -68,9 +64,9 @@ export const Cards = ({ cardData }) => {
             <Message show={message} severity="success"></Message>
             {movies &&
                 <Grid container spacing={3}>
-                    {movies.map(movie => (
+                    {movies.map((movie, index) => (
                         (
-                            <Grid item xs={12} sm={6} md={3}>
+                            <Grid key={index} item xs={12} sm={6} md={3}>
                                 <Card className={classes.root}>
                                     <CardHeader
                                         title={movie.Title}
@@ -82,6 +78,7 @@ export const Cards = ({ cardData }) => {
                                         title={movie.Title}
                                         alt={movie.Title}
                                     />
+
                                     <Button className="nominateBtn" variant="contained" disabled={checkMovieExists(movie.imdbID)} color="primary" onClick={e => nominateMovie({ movie })}>
                                         Nominate
                         </Button>

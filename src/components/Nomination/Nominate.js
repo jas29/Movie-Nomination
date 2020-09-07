@@ -30,8 +30,8 @@ export const Nominate = () => {
         if (JSON.parse(localStorage.movie) != null) {
             return (
                 <div>
-                    {Object.keys(nominateMovies).map(movie => (
-                        <MenuItem onClick={handleClose}>
+                    {Object.keys(nominateMovies).map((movie, index) => (
+                        <MenuItem key={index} onClick={handleClose}>
                             {nominateMovies[movie]}
                             <IconButton color="inherit" onClick={e => removeNomination(movie)}>
                                 <RemoveIcon />

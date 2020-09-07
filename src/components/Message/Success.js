@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
@@ -21,7 +21,7 @@ export const Message = ({ show, severity }) => {
     const [open, setOpen] = React.useState(show);
 
     const handleClose = (event, reason) => {
-        if (reason == 'clickaway') {
+        if (reason === 'clickaway') {
             return;
         }
         setOpen(false);
