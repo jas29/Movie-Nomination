@@ -1,3 +1,14 @@
+## Movie Nomination App
+
+This project leverages the OMDB API and let's users nominate upto 5 movies.
+
+Users can search for movies in the OMDB Database, and nominate or remove nominated movies based on their preference.
+
+The movie nominations are saved, should the user leave the page or refresh the page.
+
+The link to the hosted project can be found [here](https://5f569c8f3d25d400077bba33--vigilant-goldwasser-487e8e.netlify.app/)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
